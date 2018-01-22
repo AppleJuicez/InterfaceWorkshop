@@ -22,14 +22,14 @@ public class DepositSaving  implements Tenurable, Profitable {
 	@Override
 	public double calculateProfit(double capital, double month) 
 	{
-		double profit = capital * ( (int)month / this.month_tenured * this.interestRate);
+		double profit = capital / 100.0 * ( (int)month / this.month_tenured * this.interestRate );
 		return profit;
 	}
 
 	@Override
 	public double calculateTotal(double capital, double month) 
 	{
-		double profit = capital * (100.0 + ( (int)month / this.month_tenured * this.interestRate ));
+		double profit = capital / 100.0 * (100.0 + ( (int)month / this.month_tenured * this.interestRate  ));
 		return profit;
 	}
 
