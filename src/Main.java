@@ -6,6 +6,7 @@ public class Main {
 		Deposit6Month SevenM = new Deposit6Month(100000, 7);
 		Deposit6Month FourM = new Deposit6Month(50000, 4);
 		DepositSaving TenM = new DepositSaving(150000, 10);
+		/*
 		System.out.println(SevenM.getInterest());
 		System.out.println(SevenM.calculateProfit(SevenM.capital , SevenM.month_invested));
 		System.out.println(SevenM.calculateTotal(SevenM.capital , SevenM.month_invested));
@@ -26,7 +27,9 @@ public class Main {
 		System.out.println(TenM.printCondition());
 		System.out.println(TenM.getConditionPeriod());
 		System.out.println(TenM.isTenured(TenM.month_invested));
-
+		*/ //too much parameters
+		
+		
 	}
 
 }
