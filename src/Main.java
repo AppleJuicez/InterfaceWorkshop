@@ -29,6 +29,18 @@ public class Main {
 		System.out.println(TenM.isTenured(TenM.month_invested));
 		*/ //too much parameters
 		
+		DepositProductFactory DPF = new DepositProductFactory();
+		Profitable PRO = DPF.createDepoPro(6, 100000, 7);
+		System.out.println(PRO.calculateProfit());
+		System.out.println(PRO.calculateTotal());
+		System.out.println(PRO.getInterest());
+		System.out.println(PRO.printCondition());
+		
+		Profitable PRO2 = DPF.createDepoPro(1, 100000, 7);
+		System.out.println(PRO2.calculateProfit());
+		System.out.println(PRO2.calculateTotal());
+		System.out.println(PRO2.getInterest());
+		System.out.println(PRO2.printCondition());
 		
 	}
 

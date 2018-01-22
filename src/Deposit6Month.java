@@ -23,15 +23,16 @@ public class Deposit6Month implements Tenurable, Profitable {
 	@Override
 	public double calculateProfit() 
 	{
-		double profit = this.capital * ( (int)this.month_invested / this.month_tenured * this.interestRate);
+		System.out.println();
+		double profit = this.capital * Math.floor((month_invested)/(month_tenured))    *     (interestRate/100.0)    ;
 		return profit;
 	}
 
 	@Override
 	public double calculateTotal() 
 	{
-		double profit = this.capital * (100.0 + ( (int)this.month_invested / this.month_tenured * this.interestRate ));
-		return profit;
+		double total = this.capital * (1.0 + (     Math.floor((month_invested)/(month_tenured))     *     (interestRate/100.0)    ));
+		return total;
 	}
 
 	@Override
