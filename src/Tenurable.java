@@ -2,5 +2,5 @@
 public interface Tenurable 
 {
 	double getConditionPeriod();
-	boolean isTenured(double month);
+	boolean isTenured(double month); 
 }
