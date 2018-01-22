@@ -8,7 +8,7 @@ public class DepositSaving  implements Tenurable, Profitable {
 	public DepositSaving(double capital , double month_invested) 
 	{
 		this.interestRate = 0.25;
-		this.month_tenured = 1;
+		this.month_tenured = 12;
 		this.capital = capital;
 		this.month_invested = month_invested;
 	}
@@ -23,14 +23,14 @@ public class DepositSaving  implements Tenurable, Profitable {
 	public double calculateProfit() 
 	{
 		System.out.println();
-		double profit = this.capital * Math.floor((month_invested)/(month_tenured))    *     (interestRate/100.0)    ;
+		double profit = this.capital * (month_invested)/(month_tenured)   *     (interestRate/100.0)    ;
 		return profit;
 	}
 
 	@Override
 	public double calculateTotal() 
 	{
-		double total = this.capital * (1.0 + (     Math.floor((month_invested)/(month_tenured))     *     (interestRate/100.0)    ));
+		double total = this.capital * (1.0 + (    (month_invested)/(month_tenured)    *     (interestRate/100.0)    ));
 		return total;
 	}
 
